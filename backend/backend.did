@@ -1,0 +1,81 @@
+type AIContent = record {
+  creator : principal;
+  content : text;
+  access_level : AccessLevel;
+  size_bytes : nat64;
+  content_type : text;
+  created_at : nat64;
+  cycles_cost_to_create : nat64;
+};
+type AccessLevel = variant { Premium; Private; Public; Community };
+type CanisterMetrics = record {
+  storage_used_bytes : nat64;
+  total_queries : nat64;
+  total_users : nat64;
+  uptime_start : nat64;
+  total_cycles_consumed : nat64;
+};
+type CyclesRates = record {
+  query_base_cost : nat64;
+  storage_cost_per_kb : nat64;
+  computation_multiplier : float32;
+};
+type Result = variant { Ok : nat64; Err : text };
+type Result_1 = variant { Ok : text; Err : text };
+type Result_2 = variant { Ok : AIContent; Err : text };
+type Result_3 = variant { Ok : UserDashboard; Err : text };
+type SNSProposal = record {
+  id : nat64;
+  title : text;
+  description : text;
+  deadline : nat64;
+  created_at : nat64;
+  proposer : principal;
+  votes_for : nat64;
+  total_voting_power : nat64;
+  executed : bool;
+  proposal_type : SNSProposalType;
+  votes_against : nat64;
+};
+type SNSProposalType = variant {
+  SystemPromptUpdate : record { prompt_name : text; new_prompt : text };
+  UpdateCyclesRates : record { new_rates : CyclesRates };
+  TreasuryManagement : record { action : text; amount : nat64 };
+  AddAIProvider : record { provider_name : text; api_endpoint : text };
+};
+type SubscriptionTier = variant {
+  Premium : record { cycles_included : nat64; priority_access : bool };
+  Enterprise : record {
+    cycles_included : nat64;
+    private_models : bool;
+    custom_endpoints : bool;
+  };
+  Basic : record { cycles_included : nat64 };
+};
+type UserDashboard = record {
+  cycles_balance : nat64;
+  total_cycles_spent : nat64;
+  stored_content_count : nat64;
+  subscription_tier : opt SubscriptionTier;
+  token_balance : nat64;
+  conversation_count : nat64;
+};
+service : {
+  create_sns_proposal : (text, text, SNSProposalType) -> (Result);
+  deposit_user_cycles : (principal) -> (Result_1);
+  get_ai_token_balance : (principal) -> (nat64) query;
+  get_available_providers : () -> (vec text) query;
+  get_canister_metrics : () -> (CanisterMetrics) query;
+  get_sns_proposals : () -> (vec SNSProposal) query;
+  get_stored_content : (text) -> (Result_2) query;
+  get_user_cycles_balance : (principal) -> (nat64) query;
+  get_user_dashboard : (principal) -> (Result_3) query;
+  greet : (text) -> (text) query;
+  icp_ai_prompt : (text, opt text, opt text, opt bool) -> (Result_1);
+  mint_ai_tokens : (principal, nat64) -> (Result_1);
+  prompt : (text) -> (Result_1);
+  set_api_key : (text) -> ();
+  set_provider_api_key : (text, text) -> ();
+  store_ai_content : (text, text, AccessLevel) -> (Result_1);
+  vote_sns_proposal : (nat64, bool) -> (Result_1);
+}
