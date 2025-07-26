@@ -1,4 +1,4 @@
-# Universal AI Assistant: A Decentralized Knowledge Powerhouse
+# AnveshakAI: A Decentralized Knowledge Powerhouse
 
 This project is building a decentralized AI-powered knowledge assistant that runs entirely on the Internet Computer Protocol (ICP). It's designed to be a personalized AI that becomes an expert in any domain you provide, while ensuring data privacy and decentralization through blockchain technology.
 
