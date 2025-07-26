@@ -2,6 +2,16 @@
 
 This project is building a decentralized AI-powered knowledge assistant that runs entirely on the Internet Computer Protocol (ICP). It's designed to be a personalized AI that becomes an expert in any domain you provide, while ensuring data privacy and decentralization through blockchain technology.
 
+## 🛠️ Our Team
+
+This project was crafted with immense dedication and hard work by our talented team:
+
+- **Aditya Dahuja** ([@Adhityadahuja](https://github.com/Adhityadahuja))  
+- **Bhavya Jain** ([@bhavyajain009](https://github.com/bhavyajain009)) 
+
+We poured our hearts into building this innovative solution, and we're excited to share it with the world!
+
+
 ## 🚀 Quick Start
 
 ### Prerequisites
