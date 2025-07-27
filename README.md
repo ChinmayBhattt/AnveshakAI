@@ -27,8 +27,8 @@ Before setting up the Universal AI Assistant, ensure you have the following inst
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/johnnalwa/universal-ai-assistant.git
-   cd universal-ai-assistant
+   git clone https://github.com/ChinmayBhattt/AnveshakAI-Decentralized-AI-Assistant.git
+   cd AnveshakAI-Decentralized-AI-Assistant
    ```
 
 2. **Install dependencies**
