@@ -14,7 +14,7 @@ const Header = ({ userPrincipal, onConnect, onDisconnect }) => {
             </div>
             <div>
               <h1 className="text-xl font-bold text-white">AnveshakAI</h1>
-              <p className="text-blue-100 text-sm">Powered by Hacker's Unity</p>
+              <p className="text-blue-100 text-sm">Powered by Internet Computer</p>
             </div>
           </div>
 
