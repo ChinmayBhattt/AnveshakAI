@@ -13,8 +13,8 @@ const Header = ({ userPrincipal, onConnect, onDisconnect }) => {
               </svg>
             </div>
             <div>
-              <h1 className="text-xl font-bold text-white">Universal AI Assistant</h1>
-              <p className="text-blue-100 text-sm">Powered by Internet Computer</p>
+              <h1 className="text-xl font-bold text-white">AnveshakAI</h1>
+              <p className="text-blue-100 text-sm">Powered by Hacker's Unity</p>
             </div>
           </div>
 
