@@ -8,7 +8,7 @@ const WelcomeHero = ({ onGetStarted }) => {
           {/* Main Hero Content */}
           <div className="animate-fadeIn">
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              Universal AI Assistant
+              AnveshakAI - Decentralized AI Assistant
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto">
               Your intelligent companion powered by the Internet Computer blockchain. 
