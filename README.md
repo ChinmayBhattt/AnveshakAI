@@ -11,6 +11,34 @@ This project was crafted with immense dedication and hard work by our talented t
 
 We poured our hearts into building this innovative solution, and we're excited to share it with the world!
 
+## Visual Overview
+
+```mermaid
+flowchart TD
+    A1["Frontend Interface (Next.js)"]
+    A2["User Authentication & Identity (Internet Identity)"]
+    A3["Canister Backend (Rust)"]
+    A4["AI Engine (Google Gemini API)"]
+    A5["Vector Search & Embedding System"]
+    A6["Document Upload & Management"]
+    A7["Streaming Response Module"]
+    A8["DFX Deployment & Local Replica"]
+    A9["Secure API Key Storage"]
+
+    A1 -- "Authenticates via" --> A2
+    A1 -- "Interacts with" --> A3
+    A1 -- "Uploads documents to" --> A6
+    A1 -- "Receives streaming output from" --> A7
+    A1 -- "Visualizes data from" --> A5
+    A3 -- "Handles logic for" --> A5
+    A3 -- "Queries AI responses via" --> A4
+    A3 -- "Stores & secures key in" --> A9
+    A3 -- "Processes files from" --> A6
+    A3 -- "Streams responses to" --> A7
+    A8 -- "Builds & deploys" --> A1
+    A8 -- "Deploys canisters" --> A3
+```
+    
 
 ## 🚀 Quick Start
 
